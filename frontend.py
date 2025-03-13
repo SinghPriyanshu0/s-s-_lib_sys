@@ -107,14 +107,7 @@ if st.session_state.logged_in:
                 st.success(msg)
                 st.rerun()
 
-        search_term = st.text_input("🔍 Search for a book by title, author, or genre:")
-        if search_term:
-            books = search_books(search_term)
-            if books:
-                df = pd.DataFrame(books, columns=["Book ID", "Title", "Author", "Genre", "Year", "Available"])
-                st.dataframe(df)
-            else:
-                st.warning("No books found!")
+       
         
 
 
